@@ -54,7 +54,7 @@ class OCRWebService
      * Perform an OCR into a document.
      * @param string $file Path to the file to be processed.
      * @param array $options Processing options
-     * @return array
+     * @return ProcessDocument
      */
     public function processDocument($file, $options = [])
     {
@@ -125,7 +125,7 @@ class OCRWebService
 
     /**
      * Get information about the user account.
-     * @return array
+     * @return AccountInformation
      */
     public function getAccountInformation()
     {
