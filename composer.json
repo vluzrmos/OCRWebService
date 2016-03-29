@@ -1,0 +1,19 @@
+{
+    "name": "vluzrmos/ocrwebservice",
+    "description": "A wrapper for ocrwebservice.com",
+    "require": {
+        "guzzlehttp/guzzle": "~5.3|~6.0"
+    },
+    "authors": [
+        {
+            "name": "Vagner do Carmo",
+            "email": "vluzrmos@gmail.com"
+        }
+    ],
+
+    "autoload": {
+        "psr-4": {
+            "OCRWebService\\": "src/"
+        }
+    }
+}
