@@ -9,9 +9,14 @@ This package is a wrapper for http://www.ocrwebservice.com/api/restguide.
 
 ##  Usage
 
+You should have an account with a trial or other subscription plan to use that package.
+
 ### Getting Account Information
 
 ```php
+/*
+ * USERNAME and LICENSE_KEY are strings, and both are provided by ocrwebservice.com.
+ */
 $ocr = new OCRWebService\OCRWebService(USERNAME, LICENSE_KEY);
 $account = $ocr->getAccountInformation();
 
@@ -37,6 +42,11 @@ $account->availablePages; //same of getAvailablePages() method;
 ```
 ### Processing a Document 
 ```php
+/*
+ * USERNAME and LICENSE_KEY are strings, and both are provided by ocrwebservice.com.
+ */
+$ocr = new OCRWebService\OCRWebService(USERNAME, LICENSE_KEY);
+
 $document = $ocr->processDocument($pathToPdfOrImage, [
 	'gettext' => 'true',
 	'pagerange' => 'allpages',
