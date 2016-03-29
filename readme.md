@@ -9,14 +9,14 @@ This package is a wrapper for http://www.ocrwebservice.com/api/restguide.
 
 ##  Usage
 
+### Geting Account Information
+
 ```php
-
 $ocr = new OCRWebService\OCRWebService(USERNAME, LICENSE_KEY);
-
 $account = $ocr->getAccountInformation();
 
 /*
- Returns an object AccountInformation wish has a method ->toArray():
+ Returns an object AccountInformation which has a method ->toArray():
  [                                                  
    "AvailablePages" => 22,                          
    "MaxPages" => 25,                                
@@ -30,8 +30,13 @@ $account = $ocr->getAccountInformation();
 $account->getAvailablePages();
 $account->getMaxPages();
 //...
-$account->availablePages; //same of getAvailablePages() method;
 
+$account->availablePages; //same of getAvailablePages() method;
+//...
+
+```
+### Processing a Document 
+```php
 $document = $ocr->processDocument($pathToPdfOrImage, [
 	'gettext' => 'true',
 	'pagerange' => 'allpages',
@@ -44,4 +49,5 @@ $document = $ocr->processDocument($pathToPdfOrImage, [
 
 $document->getOCRText(); //return ocr 
 $document->toArray(); //return an array with all data 
-
+//...
+```
