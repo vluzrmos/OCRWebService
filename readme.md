@@ -9,7 +9,7 @@ This package is a wrapper for http://www.ocrwebservice.com/api/restguide.
 
 ##  Usage
 
-### Geting Account Information
+### Getting Account Information
 
 ```php
 $ocr = new OCRWebService\OCRWebService(USERNAME, LICENSE_KEY);
